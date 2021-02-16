@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        img {
+            max-height: 100%;
+        }
+    </style>
+
+    <script>
+
+        window.onload = function () {
+            setTimeout(
+                function () {
+                    $('#Div-A').replaceWith($('#Div-B'));
+                    $('#Div-B').show();
+                },
+                5000
+            );
+        };
+
+    </script>
+</head>
+
+<body>
+    <div id="Div-A" class="map">
+        <video autoplay muted id="myVideo">
+            <source src="earth1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div id="Div-B" style="display:none;">
+        <img src="map.png" alt="map">
+    </div>
+
+</body>
+
+</html>
